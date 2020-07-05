@@ -1,7 +1,6 @@
-module.exports = Object.assign(
-  {},
-  require("./models/NewtContent"),
-  require("./models/NewtSeries"),
-  require("./models/ContentCreator"),
-  require("./models/Source")
-);
+module.exports = {
+  newtContentSchema: require("./models/NewtContent"),
+  newtSeriesSchema: require("./models/NewtSeries"),
+  newtContentCreatorSchema: require("./models/ContentCreator"),
+  newtSourceSchema: require("./models/Source"),
+};
