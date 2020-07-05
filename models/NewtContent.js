@@ -5,6 +5,7 @@ const newtContentSchema = new Schema({
   name: String,
   description: String,
   url: String,
+  thumbnailUrl: String,
   partOfSeries: Boolean,
   // Name, url, description fields denormalized because very unlikely to change
   series: {

@@ -5,6 +5,7 @@ const contentCreatorSchema = new Schema({
   name: String,
   description: String,
   url: String,
+  thumbnailUrl: String,
   // References to Series
   series: [
     {

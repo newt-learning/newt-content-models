@@ -5,6 +5,7 @@ const newtSeriesSchema = new Schema({
   name: String,
   description: String,
   url: String,
+  thumbnailUrl: String,
   type: {
     type: String,
     enum: ["video"],
