@@ -6,7 +6,7 @@ const contentCreatorSchema = new Schema({
   description: String,
   url: String,
   // References to Series
-  newtSeries: [
+  series: [
     {
       type: Schema.Types.ObjectId,
       ref: "NewtSeries",
