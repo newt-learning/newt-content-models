@@ -6,6 +6,10 @@ const newtContentSchema = new Schema({
   description: String,
   url: String,
   thumbnailUrl: String,
+  type: {
+    type: String,
+    enum: ["book", "video"],
+  },
   partOfSeries: Boolean,
   // Name, url, description fields denormalized because very unlikely to change
   series: {

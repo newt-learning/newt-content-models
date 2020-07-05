@@ -8,6 +8,10 @@ const newtSeriesSchema = new Schema({
   thumbnailUrl: String,
   type: {
     type: String,
+    enum: ["series"],
+  },
+  contentType: {
+    type: String,
     enum: ["video"],
   },
   content: [
