@@ -24,8 +24,25 @@ const newtSeriesSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "ContentCreator",
   },
+  // Name denormalized because very unlikely to change
+  source: {
+    name: String,
+    mediaId: String,
+    sourceId: {
+      type: Schema.Types.ObjectId,
+      ref: "Source",
+    },
+  },
   dateAdded: Date,
   lastUpdated: Date,
+  seriesInfo: {
+    playlistId: String,
+    title: String,
+    description: String,
+    channelId: String,
+    datePublished: Date,
+    thumbnails: Object,
+  },
 });
 
 module.exports = newtSeriesSchema;

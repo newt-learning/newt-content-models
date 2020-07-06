@@ -42,6 +42,15 @@ const newtContentSchema = new Schema({
   },
   dateAdded: Date,
   lastUpdated: Date,
+  videoInfo: {
+    playlistId: String,
+    playlistPosition: Number,
+    title: String,
+    description: String,
+    channelId: String,
+    datePublished: String,
+    thumbnails: Object,
+  },
 });
 
 module.exports = newtContentSchema;
