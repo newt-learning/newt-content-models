@@ -43,6 +43,7 @@ const newtContentSchema = new Schema({
   dateAdded: Date,
   lastUpdated: Date,
   videoInfo: {
+    videoId: String,
     playlistId: String,
     playlistPosition: Number,
     title: String,
