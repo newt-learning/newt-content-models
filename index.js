@@ -4,4 +4,5 @@ module.exports = {
   newtContentCreatorSchema: require("./models/ContentCreator"),
   newtSourceSchema: require("./models/Source"),
   newtQuizSchema: require("./models/NewtQuiz"),
+  newtQuizQuestionSchema: require("./models/QuizQuestion"),
 };
