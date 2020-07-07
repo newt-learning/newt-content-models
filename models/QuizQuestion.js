@@ -5,6 +5,7 @@ const questionSchema = new Schema({
   question: String,
   options: [
     {
+      _id: false,
       option: String,
       // Explanation/more details for a particular option. Used to explain why
       // a particular answer is right or wrong.
