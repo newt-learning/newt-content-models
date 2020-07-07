@@ -40,6 +40,10 @@ const newtContentSchema = new Schema({
       ref: "Source",
     },
   },
+  quizId: {
+    type: Schema.Types.ObjectId,
+    ref: "NewtQuiz",
+  },
   dateAdded: Date,
   lastUpdated: Date,
   videoInfo: {
