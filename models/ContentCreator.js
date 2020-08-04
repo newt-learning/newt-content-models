@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const { slugify } = require("../helpers");
 
 const contentCreatorSchema = new Schema({
   name: String,
@@ -31,6 +32,11 @@ const contentCreatorSchema = new Schema({
     lowercase: true,
     unique: true,
   },
+});
+
+contentCreatorSchema.pre("save", function (next) {
+  this.slug = slugify(this.name);
+  next();
 });
 
 module.exports = contentCreatorSchema;
