@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const { slugify } = require("./helpers");
+const { slugify } = require("../helpers");
 
 const newtContentSchema = new Schema({
   name: String,
