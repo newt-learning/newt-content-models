@@ -22,11 +22,12 @@ const newtContentSchema = new Schema({
       ref: "NewtSeries",
     },
   },
-  // Name, url, description denormalized because very unlikely to change
+  // Name, url, description, slug denormalized because very unlikely to change
   contentCreator: {
     name: String,
     url: String,
     description: String,
+    slug: String,
     contentCreatorId: {
       type: Schema.Types.ObjectId,
       ref: "ContentCreator",
