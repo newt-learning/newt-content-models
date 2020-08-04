@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const { slugify } = require("./helpers");
 
 const newtContentSchema = new Schema({
   name: String,
@@ -46,6 +47,11 @@ const newtContentSchema = new Schema({
   },
   dateAdded: Date,
   lastUpdated: Date,
+  slug: {
+    type: String,
+    lowercase: true,
+    unique: true,
+  },
   videoInfo: {
     videoId: String,
     playlistId: String,
@@ -56,6 +62,11 @@ const newtContentSchema = new Schema({
     datePublished: String,
     thumbnails: Object,
   },
+});
+
+newtContentSchema.pre("save", function (next) {
+  this.slug = slugify(this.name);
+  next();
 });
 
 module.exports = newtContentSchema;

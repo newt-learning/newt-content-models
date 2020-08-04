@@ -26,6 +26,11 @@ const contentCreatorSchema = new Schema({
   },
   dateAdded: Date,
   lastUpdated: Date,
+  slug: {
+    type: String,
+    lowercase: true,
+    unique: true,
+  },
 });
 
 module.exports = contentCreatorSchema;

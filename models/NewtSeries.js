@@ -35,6 +35,11 @@ const newtSeriesSchema = new Schema({
   },
   dateAdded: Date,
   lastUpdated: Date,
+  slug: {
+    type: String,
+    lowercase: true,
+    unique: true,
+  },
   seriesInfo: {
     playlistId: String,
     title: String,
